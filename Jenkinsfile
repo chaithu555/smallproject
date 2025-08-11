@@ -18,7 +18,7 @@ pipeline {
                 ANYPOINT_CREDENTIALS = credentials('anypointplatform')
             }
             steps {
-                bat 'mvn deploy -DmuleDeploy -DmuleVersion=4.9.0 -Dusername=Chaithu08 -Dpassword=Chaithu@516 -Dreplicas=1 -DvCores=0.1 -Dtarget=Cloudhub-US-East-2'
+                 bat 'mvn deploy -DmuleDeploy -DmuleVersion=4.9.0 -Dusername=Chaithu08 -Dpassword=Chaithu@516 -Denvironment=Sandbox -Dreplicas=1 -DvCores=0.1 -Dtarget=Cloudhub-US-East-2 -Dprovider=MC -Dserver=cloudhub2-deployment'
             }
         }
     }
