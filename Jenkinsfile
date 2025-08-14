@@ -17,7 +17,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'anypointplatform', usernameVariable: 'ANYPOINT_USERNAME', passwordVariable: 'ANYPOINT_PASSWORD')]) {
                     echo 'Deploying to CloudHub 2.0...'
-                    bat "
+                    bat """
                         mvn deploy -DmuleDeploy -DmuleVersion=4.9.0 ^
                         -Dusername=Chaithu08 ^
                         -Dpassword=Chaithu@516 ^
@@ -26,7 +26,7 @@ pipeline {
                         -DvCores=0.1 ^
                         -Dtarget=Cloudhub-US-East-2 ^
                         -Dprovider=MC
-                    "
+                   """
                 }
             }
         }
